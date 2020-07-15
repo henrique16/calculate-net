@@ -11,7 +11,7 @@ const app = express()
 app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.get("/", (req, res, next) => {
-    res.status(200).sendFile(`${__dirname}/view/index.html`)
+    res.status(200).sendFile(`${__dirname}/client/view/index.html`)
 })
 app.get("/getDomain", (req, res, next) => {
     res.status(200).send({

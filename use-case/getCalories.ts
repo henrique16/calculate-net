@@ -1,18 +1,14 @@
+import { CalculateNet } from "./calculateNet"
 import { Patient } from "../domain/patient"
 import { FA } from "../domain/fa"
 import { FI } from "../domain/fi"
 import { FT } from "../domain/ft"
-import { CheckPatient } from "./checkPatient"
-import { FactorSum } from "./factorSum"
-import { CalculateTmb } from "./calculateTmb"
-import { CalculateNet } from "./calculateNet"
 
 export class GetCalories {
     private calculateNet: CalculateNet
-    
 
-    public constructor(calculateNet: CalculateNet) {
-        this.calculateNet = calculateNet
+    public constructor(patient: Patient, fa: FA, fi: FI, ft: FT) {
+        this.calculateNet = new CalculateNet(patient, fa, fi, ft)
     }
 
     public get(): Promise<number> {
