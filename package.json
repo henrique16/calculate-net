@@ -1,0 +1,22 @@
+{
+  "name": "net_nutri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start ./dist/index.js",
+    "restart": "pm2 restart all",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.23",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "typescript": "^3.9.6"
+  }
+}
