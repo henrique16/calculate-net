@@ -12,5 +12,8 @@ NodeJs and Typescript
       
 ### Start
        . start.sh
+       
+### Restart
+       . restart.sh           
       
 The application will run on port 3080
