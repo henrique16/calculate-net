@@ -20,8 +20,8 @@ export class FactorSum<T> {
 
     public sum(): number {
         var sum = 0
-        for (let valor of this.array) {
-            sum += valor
+        for (let value of this.array) {
+            sum += value
         }
         return sum
     }
