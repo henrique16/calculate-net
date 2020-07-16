@@ -4,7 +4,7 @@ import { Patient } from "./domain/patient"
 import { FA } from "./domain/fa"
 import { FI } from "./domain/fi"
 import { FT } from "./domain/ft"
-import { getCalories } from "./use-case-builder/getCalories"
+import { getCalories } from "./builder/getCalories"
 
 const port = 3080
 const app = express()

@@ -1,4 +1,4 @@
-import { getCalories } from "./use-case-builder/getCalories"
+import { getCalories } from "./builder/getCalories"
 import { Patient } from "./domain/patient"
 import { FA } from "./domain/fa"
 import { FI } from "./domain/fi"
