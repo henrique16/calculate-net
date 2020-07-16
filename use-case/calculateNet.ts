@@ -28,7 +28,7 @@ export class CalculateNet {
             const ft: number = new FactorSum<FT>(this.ft).sum()
             var net: number = tmb * (fa ? fa : 1) * (fi ? fi : 1) * (ft ? ft : 1)
             net = parseFloat(net.toFixed(2))
-            return net
+            return Promise.resolve(net)
         }
         catch (error) {
             return Promise.reject(error)
