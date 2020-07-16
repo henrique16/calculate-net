@@ -1,4 +1,4 @@
-import { Factor } from "../domain/factor"
+import { Factor } from "../interface/factor"
 
 export class FactorSum<T> {
     private factor: any

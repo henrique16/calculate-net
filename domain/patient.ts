@@ -1,4 +1,4 @@
-import { Factor } from "./factor"
+import { Factor } from "../interface/factor"
 import { EnumGender } from "./enumGender"
 
 export class Patient {

@@ -1,4 +1,4 @@
-import { Factor } from "./factor"
+import { Factor } from "../interface/factor"
 
 export class FI {
     public uncomplicatedPatient: Factor

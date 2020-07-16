@@ -1,5 +1,5 @@
 import { Patient } from "../domain/patient"
-import { Factor } from "../domain/factor"
+import { Factor } from "../interface/factor"
 
 export class CheckPatient {
     private patient: any
