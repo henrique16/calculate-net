@@ -10,11 +10,10 @@ const port = 3080
 const app = express()
 app.use(express.static(__dirname))
 app.use(bodyParser.json())
+app.set("view engine", "ejs")
+app.set("views", `${__dirname}/client/views`)
 app.get("/", (req, res, next) => {
-    res.status(200).sendFile(`${__dirname}/client/view/index.html`)
-})
-app.get("/getDomain", (req, res, next) => {
-    res.status(200).send({
+    res.status(200).render(`home/index.ejs`, {
         patient: new Patient(),
         fa: new FA(),
         fi: new FI(),

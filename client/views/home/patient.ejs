@@ -1,0 +1,27 @@
+<h3>Paciente</h3>
+<table>
+    <tbody>
+        <%
+    for (let key in patient) {
+        const object = patient[key] %>
+        <tr>
+            <td><%= object.name %></td>
+            <%
+        if (key === "gender") { %>
+            <td>
+                <input id="2" type="radio" onclick="setGender(event, data.patient)" name="<%= key %>"> Feminino
+            </td>
+            <td>
+                <input id="1" type="radio" onclick="setGender(event, data.patient)" name="<%= key %>"> Masculino
+            </td>
+            <%
+        } 
+        else { %>
+            <td><input id="<%= key %>" onchange="setValue(event, patient)" type="text"></td>
+            <%
+        } %>
+        </tr>
+        <%
+    } %>
+    </tbody>
+</table>

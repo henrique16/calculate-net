@@ -1,0 +1,27 @@
+<h3><%= title %></h3>
+<table>
+    <tbody>
+        <%
+    for (let key in factor) { 
+        let object = factor[key] %>
+        <tr>
+            <td>
+                <input id="<%= key %>" onclick='setFactor(event, data[<%- JSON.stringify(prop) %>])' type="checkbox">
+            </td>
+            <td><%= object.name %></td>
+            <%
+        if (!object.value) { %>
+            <td>
+                <input id="<%= key %>Text" onchange='setValue(event, data[<%- JSON.stringify(prop) %>])' type="text">
+            </td>
+            <%
+        } 
+        else { %>
+            <td><%= object.value %></td>
+            <%
+        } %>
+        </tr>
+        <%
+    } %>
+    </tbody>
+</table>

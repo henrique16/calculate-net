@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("style.ejs") %>
+    <div id="patient" class="div-content">
+        <script>factor = patient</script>
+        <%- include("patient.ejs") %>
+    </div>
+    <div id="fa" class="div-content">
+        <%- include("factor.ejs", { factor: fa, title: "FA", prop: "fa" }) %>
+    </div>
+    <div id="fi" class="div-content">
+        <%- include("factor.ejs", { factor: fi, title: "FI", prop: "fi" }) %>
+    </div>
+    <div id="ft" class="div-content">
+        <%- include("factor.ejs", { factor: ft, title: "FT", prop: "ft" }) %>
+    </div>
+    <div>
+        <input type="submit" value="Calcular" onclick="renderCalories()">
+        <span id="calories"></span>
+    </div>
+    <script>
+        const patient = <%- JSON.stringify(patient) %>;
+        const fa = <%- JSON.stringify(fa) %>;
+        const fi = <%- JSON.stringify(fi) %>;
+        const ft = <%- JSON.stringify(ft) %>;
+    </script>
+    <script src="/client/public/home/index.js"></script>
+</body>
+</html>
